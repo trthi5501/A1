@@ -1,0 +1,41 @@
+- pipeline: "deploy qa"
+  on: "EVENT"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/master"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: "Execute: npm run build"
+    type: "BUILD"
+    working_directory: "/buddy/a1"
+    docker_image_name: "library/node"
+    docker_image_tag: "16"
+    execute_commands:
+    - "npm install"
+    - "# add to your karma.conf.js"
+    - "# browsers: ['ChromeHeadless', 'Chrome'],"
+    - "# customLaunchers: {"
+    - "#   ChromeHeadless: {"
+    - "#     base: 'Chrome',"
+    - "#     flags: ["
+    - "#       '--headless',"
+    - "#       '--disable-gpu',"
+    - "#       '--no-sandbox',"
+    - "#       '--remote-debugging-port=9222'"
+    - "#     ]"
+    - "#   }"
+    - "# }"
+    - ""
+    - "ng test --watch=false --browsers=ChromeHeadless"
+    setup_commands:
+    - "npm install -g @angular/cli"
+    - "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -"
+    - "echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" > /etc/apt/sources.list.d/google.list"
+    - "apt-get update"
+    - "apt-get install -y google-chrome-stable xvfb"
+    volume_mappings:
+    - "/:/buddy/a1"
+    cache_base_image: true
+    shell: "BASH"
