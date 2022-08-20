@@ -1,16 +1,28 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
 export const environment = {
-  production: false
+  production: false,
+  develop: true,
+  firebase: {
+    projectId: 'authutop',
+    appId: '1:827349160089:web:2d91af17c38cbdd3b9a808',
+    databaseURL:
+      'https://authutop-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'authutop.appspot.com',
+    locationId: 'asia-southeast1',
+    apiKey: 'AIzaSyDtyEXWkhK9UKT2zq32kl25nRTZ_Y_SDes',
+    authDomain: 'authutop.firebaseapp.com',
+    messagingSenderId: '827349160089',
+    measurementId: 'G-E1J70CEXCV',
+  },
+  apiHost: 'https://localhost:44361',
+  requestHeader: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': '*',
+    'Access-Control-Max-Age': '604800',
+    'Access-Control-Allow-Credentials': 'true',
+    'Api-Version': 'qa',
+    'Ocp-Apim-Subscription-Key': '9b225505a06d464fb80be0bd72a3f92d',
+    CampaignId: '26000',
+    TenantId: '26',
+    UID: '',
+  },
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

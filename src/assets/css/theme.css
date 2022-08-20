@@ -1,0 +1,61 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: 110%;
+    background: rgba(34, 34, 34, 0.1);
+    z-index: 99999;
+  }
+  .overlay.overlay-inner {
+    position: fixed;
+    background: rgba(21, 21, 21, 0.5);
+  }
+  .overlay.overlay-inner .inner {
+    top: 45%;
+  }
+  .overlay.overlay-inner .inner .spinner {
+    display: block;
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 0.8vw solid transparent;
+    border-top: 0.8vw solid #1f3a82;
+    animation: spinv2 1s linear infinite;
+  }
+  .overlay.overlay-inner .inner .spinner::before, .overlay.overlay-inner .inner .spinner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 0.8vw solid transparent;
+  }
+  .overlay.overlay-inner .inner .spinner::before {
+    top: 0.8vw;
+    left: 0.8vw;
+    right: 0.8vw;
+    bottom: 0.8vw;
+    border-top-width: 1.0666666667vw;
+    border-top-color: #3a5ab1;
+    animation: spinv2 2.25s linear infinite;
+  }
+  .overlay.overlay-inner .inner .spinner::after {
+    top: 2.6666666667vw;
+    left: 2.6666666667vw;
+    right: 2.6666666667vw;
+    bottom: 2.6666666667vw;
+    border-top-width: 1.3333333333vw;
+    border-top-color: #6985d0;
+    animation: spinv2 0.75s linear infinite;
+  }
+  .overlay .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .overlay.show {
+    display: block;
+  }

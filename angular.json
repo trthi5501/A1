@@ -72,7 +72,8 @@
               "browserTarget": "netlify-Angular:build:production"
             },
             "development": {
-              "browserTarget": "netlify-Angular:build:development"
+              "browserTarget": "netlify-Angular:build:development",
+              "ssl": true
             }
           },
           "defaultConfiguration": "development"

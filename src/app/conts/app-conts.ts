@@ -1,0 +1,23 @@
+export const AppConsts = {
+  typeService: 'typeService',
+  historyForm: 'UserInfo',
+  adminService: 'AdminService',
+  userid: 'loginProviderId',
+  consumerService: 'ConsumerService',
+  authorizationKey: 'Authorization',
+  currentShoperKey: '461cda711d9d4103e7fa19e0e10',
+  campaignInfoKey: '_cp',
+  returnUrl: 'returnUrl',
+  accessToken: 'accessToken',
+  phoneExisted: 'exist',
+  hasUpdateInfo: 'hasUpdateInfo',
+  vnTimeNeverExpired: 'XEM THÊM >',
+  vnDotPattenDate: 'dd.MM.yyyy',
+  vnLinePattenDate: 'dd/MM/yyyy',
+  remainingDateDisplay: 3,
+  phonePatten: /[0-9]+/,
+  namePatten:
+    /[^\~\!\@\#\$\%\^\&\*\(\)\_\+\{\}\|\:\"\<\>\?\`\[\]\\\;\'\,\.\/0-9]+/,
+  limitCapture: '_lca',
+  unileverStaffUser: 'unileverStaffUser',
+};
